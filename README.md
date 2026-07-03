@@ -1,49 +1,106 @@
-Task: Student Management API (GET + POST)
+JavaScript Fetch API Mega Assignment
+Project: Student Management System
 Objective
 
-Use the Fetch API to:
+Create a JavaScript application that manages students using the Fetch API.
 
-Create a new student using POST.
-Fetch all students using GET.
-API
-Base URL:
+API Base URL
 https://jsonplaceholder.typicode.com
-Endpoint
-POST  /users
-GET   /users
 Requirements
-Step 1 - Create a Student (POST)
 
-Create a new student with the following data:
+Complete the following tasks in one project.
+
+1. Fetch All Students (GET)
+Fetch all students from /users.
+Print the complete data in the console.
+Also print only:
+Name
+Username
+Email
+2. Fetch a Single Student (GET)
+
+Fetch the student with id = 5.
+
+Print:
+
+Name
+Username
+Email
+Phone
+3. Create a New Student (POST)
+
+Create the following student:
 
 {
     name: "Harsh",
     username: "harsh123",
-    email: "harsh@example.com"
+    email: "harsh@example.com",
+    phone: "9876543210"
 }
-Use fetch()
-Use method: "POST"
-Add the correct headers.
-Convert the object into JSON.
-Print the created student in the console.
-Step 2 - Get All Students (GET)
 
-After the POST request completes successfully:
+Requirements:
 
-Send a GET request to /users.
-Convert the response into JSON.
-Print all users in the console.
-Expected Flow
-Creating Student...
+Use POST
+Add request headers.
+Convert the object using JSON.stringify().
+Print the created response.
+4. Replace Student Data (PUT)
 
-↓
+Replace the data of student id = 5 with:
 
-Student Created Successfully
+{
+    name: "Rahul",
+    username: "rahul007",
+    email: "rahul@example.com",
+    phone: "9999999999"
+}
 
-↓
+Print the updated response.
 
-Fetching All Students...
+5. Update Student Email (PATCH)
 
-↓
+Update only the email of student id = 5.
 
-Display All Students in Console
+{
+    email: "updated@example.com"
+}
+
+Print the updated response.
+
+6. Check the Response Object
+
+For every request, print:
+
+response.status
+response.ok
+
+Then convert the response into JSON using:
+
+response.json()
+7. Error Handling
+
+Make one request to an invalid endpoint.
+
+Example:
+
+https://jsonplaceholder.typicode.com/invalid
+
+If an error occurs, display an appropriate message in the console using .catch().
+
+Rules
+
+Your project must use all of the following:
+
+fetch()
+GET
+POST
+PUT
+PATCH
+.then()
+.catch()
+response.json()
+response.status
+response.ok
+headers
+Content-Type: application/json
+JSON.stringify()
