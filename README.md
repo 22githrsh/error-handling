@@ -1,106 +1,72 @@
-JavaScript Fetch API Mega Assignment
-Project: Student Management System
+Task: Weather App (HTML, CSS & JavaScript)
 Objective
 
-Create a JavaScript application that manages students using the Fetch API.
+Build a Weather App using:
 
-API Base URL
-https://jsonplaceholder.typicode.com
+HTML
+CSS
+JavaScript
+Fetch API
+Async/Await
+HTTP GET Method
+DOM Manipulation
+Error Handling
 Requirements
+Step 1: Create the UI
 
-Complete the following tasks in one project.
+Design a weather application that contains:
 
-1. Fetch All Students (GET)
-Fetch all students from /users.
-Print the complete data in the console.
-Also print only:
-Name
-Username
-Email
-2. Fetch a Single Student (GET)
+Input field for city name
+Search button
+Weather information card
 
-Fetch the student with id = 5.
+The weather card should display:
 
-Print:
+City Name
+Temperature
+Weather Condition
+Humidity
+Wind Speed
+Weather Icon
+Step 2: Fetch Weather Data
 
-Name
-Username
-Email
-Phone
-3. Create a New Student (POST)
+Use the following Weather API:
 
-Create the following student:
+https://api.openweathermap.org/data/2.5/weather?q={city}&appid=YOUR_API_KEY&units=metric
+Step 3: Get Data Using Async/Await
 
-{
-    name: "Harsh",
-    username: "harsh123",
-    email: "harsh@example.com",
-    phone: "9876543210"
-}
+Create an asynchronous function to fetch weather data.
 
 Requirements:
 
-Use POST
-Add request headers.
-Convert the object using JSON.stringify().
-Print the created response.
-4. Replace Student Data (PUT)
+Use fetch()
+Use await
+Convert response into JSON
+Display data in the console first
+Step 4: Search Functionality
 
-Replace the data of student id = 5 with:
+When the user clicks the Search button:
 
-{
-    name: "Rahul",
-    username: "rahul007",
-    email: "rahul@example.com",
-    phone: "9999999999"
-}
+Read the city name from the input field.
+Call the weather function.
+Fetch the weather details for that city.
+Step 5: Display Data on the Page
 
-Print the updated response.
+Show the following information using DOM Manipulation:
 
-5. Update Student Email (PATCH)
+City Name
+Temperature
+Weather Condition
+Humidity
+Wind Speed
+Weather Icon
+Step 6: Error Handling
 
-Update only the email of student id = 5.
+Handle the following cases:
 
-{
-    email: "updated@example.com"
-}
+Empty input field
+Invalid city name
+Network error
+API response error
 
-Print the updated response.
-
-6. Check the Response Object
-
-For every request, print:
-
-response.status
-response.ok
-
-Then convert the response into JSON using:
-
-response.json()
-7. Error Handling
-
-Make one request to an invalid endpoint.
-
-Example:
-
-https://jsonplaceholder.typicode.com/invalid
-
-If an error occurs, display an appropriate message in the console using .catch().
-
-Rules
-
-Your project must use all of the following:
-
-fetch()
-GET
-POST
-PUT
-PATCH
-.then()
-.catch()
-response.json()
-response.status
-response.ok
-headers
-Content-Type: application/json
-JSON.stringify()
+Use try...catch for error handling and display appropriate messages to the user.
